@@ -16,7 +16,7 @@ console.log(typeof n)//number
 
 console.log(1 / 0); // Infinity
 
-console.log("not a number" / 2); // NaN, таке ділення є помилковим
+console.log("not a number" / 2); // NaN, таке ділення є помилковим /  NaN, such division is erroneous
 
 let billion = 1000000000;
 //Також можна використовувати знак підкреслення (нижню риску) _ в якості розділювача:
@@ -51,9 +51,9 @@ console.log(`Hello, ${nameI}е!`); // Hello, Ivanе!
 console.log(typeof nameI)//string
 
 // вбудований вираз
-console.log(`Resalt: ${1 + 2}`); // результат: 3
+console.log(`Resalt: ${1 + 2}`); // Resalt: 3
 
-console.log("Resalt: ${1 + 2}"); // Resalt: ${1 + 2} (подвійні лапки не мають ніякого впливу)
+console.log("Resalt: ${1 + 2}"); // Resalt: ${1 + 2} (подвійні лапки не мають ніякого впливу) //the result is ${1 + 2} (double quotes do nothing)
 
 let bar = "bar";
 console.log(bar);//bar
@@ -68,20 +68,20 @@ console.log(newBar);//BAR
 
 let str = 'Оy';
 
-str = 'о' + str[1]; // замінюємо рядок
+str = 'о' + str[1]; // замінюємо рядок // change the word
 
 alert( str ); // оy
 
 //Перетворення на число
-console.log( "6" / "2" ); // 3, рядки перетворюються на числа
+console.log( "6" / "2" ); // 3, рядки перетворюються на числа /convert in number
 
 
 //boolean
-let nameFieldChecked = true; // так, ім’я було перевірене
-let ageFieldChecked = false; // ні, вік не був перевіреним
+let nameFieldChecked = true; // 
+let ageFieldChecked = false; // 
 let isGreater = 4 > 1;
 
-console.log(isGreater); // true (результат порівняння — "так")
+console.log(isGreater); // true 
 console.log(typeof nameFieldChecked)//boolean
 
 

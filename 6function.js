@@ -83,17 +83,17 @@ learnjS("JavaScript", done);
   // Способи створення IIFE
 
   (function() {
-    console.log("Дужки навколо функції");
+    console.log("one");
   })();
   
   (function() {
-    console.log("Круглі дужки навколо всього");
+    console.log("two");
   }());
   
   !function() {
-    console.log("Побітовий оператор NOT запускає вираз");
+    console.log("three");
   }();
   
   +(function () {
-    console.log("Унарний плюс запускає вираз");
+    console.log("four");
   })();

@@ -82,7 +82,7 @@ let codes ={
 
 
 
-//for...of  Array, String, Map, Set, об'єкт аргументів 
+//for...of  Array, String, Map, Set, 
 for (let i of arr) {
    console.log(i); // "3", "5", "7"
 }
@@ -110,7 +110,7 @@ for (let i of arr) {
    console.log(i); //  "3", "5", "7"
 }
 
-//Цикл “while”
+//loop “while”
 
 
 let i = 0;
@@ -121,7 +121,7 @@ while (i < 3) { // показується 0, далі 1, потім 2
 
 
 
-//Цикл “do…while”
+//loop “do…while”
 
 let i = 0;
 do {
