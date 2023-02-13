@@ -22,9 +22,10 @@ let billion = 1000000000;
 //Також можна використовувати знак підкреслення (нижню риску) _ в якості розділювача:
 
 let billion = 1_000_000_000;
+console.log(billion);
 
 let billion = 1e9;  // 1 мільярд, буквально: 1 та 9 нулів
-
+console.log(billion);
 
 //BigInt
 //У JavaScript, тип “number” не може містити числа більші за (253-1) (це 9007199254740991), 
@@ -36,15 +37,18 @@ console.log(typeof num)//bigint
 
 
 //string
-let str = " ";
-let str2 = ' ';
-let phrase = ` ${str}`;
+let str = "one ";
+let str2 = ' two';
+let phrase = ` three 
++
+ ${str}`;
+console.log(phrase);
 
-let name = "Ivan";
+let nameI = "Ivan";
 
 // вбудована змінна
-console.log(`Hello, ${name}е!`); // Hello, Ivanе!
-console.log(typeof name)//string
+console.log(`Hello, ${nameI}е!`); // Hello, Ivanе!
+console.log(typeof nameI)//string
 
 // вбудований вираз
 console.log(`Resalt: ${1 + 2}`); // результат: 3
@@ -70,6 +74,8 @@ alert( str ); // оy
 
 //Перетворення на число
 console.log( "6" / "2" ); // 3, рядки перетворюються на числа
+
+
 //boolean
 let nameFieldChecked = true; // так, ім’я було перевірене
 let ageFieldChecked = false; // ні, вік не був перевіреним

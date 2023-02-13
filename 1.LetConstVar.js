@@ -22,22 +22,22 @@ num = 5; // помилка: num не оголошено
 console.log(num)//ReferenceError: num is not defined
 
 let message;
-message = 'Привіт'; // збереження рядка 'Привіт' у змінній `message`
+message = 'Hello'; // збереження рядка 'Привіт' у змінній `message`
 console.log(message);
 
 //Ми також можемо оголосити декілька змінних в одному рядку:
-let user = 'Іван', age = 25, message = 'Привіт';
+let user = 'Ivan', age = 25, message = 'Hello'';
 
 //Багаторядковий спосіб трохи довший, проте його легше читати:
 
-let user = 'Іван';
+let user = 'Ivan';
 let age = 25;
-let message = 'Привіт';
+let message = 'Hello';
 console.log(user, age, message);
 
-let user = "Іван",
+let user = "Ivan",
   age = 25,
-  message = "Привіт";
+  message = "Hello";
 console.log(user, age, message);
 
 
@@ -45,8 +45,8 @@ console.log(user, age, message);
 //LET
 //ПЕРЕОГОЛОШЕННЯ
 let message;
-message = 'Привіт!';
-message = 'Світ!'; // значення змінено
+message = 'Hello!';
+message = 'World!'; // значення змінено
 console.log(message);
 
 let user;
@@ -78,8 +78,9 @@ if (true) {
 //МЕРТВА ЗОНА
 function do_something() {
     console.log(foo); // ReferenceError: foo is not defined
-    let foo = 2;//ReferenceError: Cannot access 'foo' before initialization
+    //let foo = 2;//ReferenceError: Cannot access 'foo' before initialization
   }
+  let foo = 2;//2
   do_something()
 
   //VAR
@@ -90,7 +91,7 @@ console.log(user); // Ivan
 
 //ХОСТИНГ
 console.log(message);//undefined
-var message = "Це";
+var message = "Something";
 
 // БЛОК СКОУП
 var apples = 5;
@@ -103,7 +104,7 @@ console.log(apples); // 10 змінна існує поза блоком if
 
 function sayHi() {
   if (true) {
-    var phrase = "Привіт";
+    var phrase = "Hello";
   }
 
   console.log(phrase); // спрацьовує
@@ -115,9 +116,10 @@ console.log(phrase); // ReferenceError: phrase не визначена
 //МЕРТВА ЗОНА
 function do_something() {
      console.log(bar); // undefined 
-     var bar = 1; //код не виконається
+     //var bar = 1; //код не виконається
    }
-   do_something()//undefined
+   var bar = 1;
+   do_something()//2 / undefined
 
 
    function sayHi() {
@@ -160,11 +162,11 @@ console.log(apples); // 5
 
 //МЕРТВА ЗОНА
 function do_something() {
-    console.log(bar); // undefined 
-    const bar = 1; //undefined
+    console.log(bar); 
+    //const bar = 1; 
   }
   const bar = 1; 
-  do_something() //ReferenceError: Cannot access 'bar' before initialization
+  do_something() // 1
 
 //МЕРТВА ЗОНА
 function do_something() {
@@ -186,7 +188,7 @@ function do_something() {
     var test = true; // використовуємо "var" замість "let"
   }
   
-  alert(test); // true, змінна існує поза блоком if
+  console.log(test); // true, змінна існує поза блоком if
 
 
 
@@ -194,4 +196,4 @@ function do_something() {
     let test = true; // використовуємо "let"
   }
   
-  alert(test); // ReferenceError: test не визначена
+  console.log(test); // ReferenceError: test не визначена
