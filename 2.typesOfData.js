@@ -68,12 +68,12 @@ console.log(newBar);//BAR
 
 let str = 'Оy';
 
-str = 'о' + str[1]; // замінюємо рядок // change the word
+str = 'о' + str[1]; // change the word
 
 alert( str ); // оy
 
 //Перетворення на число
-console.log( "6" / "2" ); // 3, рядки перетворюються на числа /convert in number
+console.log( "6" / "2" ); // 3, convert in number
 
 
 //boolean

@@ -1,20 +1,20 @@
-//Умовні розгалуження: if, '?'
 
-//Блок “if” The “if” statement
+
+// The “if” statement
 let year = 2015
 if (year == 2015) {
 console.log( 'You ara right!' ); }
 
 
-//Блок “else” The “else” clause
+//block “else” The “else” clause
 let year = 2014
 if (year == 2015) {
     console.log( 'You ara right!' );
 } else {
-    console.log( 'You ara wrong!' ); // будь-яке значення, окрім 2015 / any value except 2015
+    console.log( 'You ara wrong!' ); // any value except 2015
 }
 
-//Декілька умов: “else if” / Several conditions: “else if”
+// Several conditions: “else if”
 
 let year = 2015;
 
@@ -44,7 +44,7 @@ let message = (age < 3) ? 'Hi' :
 
   console.log( message );
 
-//Ось як це буде виглядати у випадку з використанням if..else: Here’s how this looks using if..else:
+//if..else: Here’s how this looks using if..else:
 
 if (age < 3) {
   message = 'Hi';
@@ -85,7 +85,7 @@ switch (a) {
     alert('Вірно!');
     break;
 
-  case 3: // (*) групуємо два блоки `case`
+  case 3: // (*) group two blocks in one `case`
   case 5:
     console.log('Wrong');
     console.log("You are wrong");

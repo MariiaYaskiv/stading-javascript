@@ -1,4 +1,14 @@
 //Методи примітивів
+
+// string methods
+let str = 'asd'
+// length
+// slice
+// includes
+// replace
+// concat
+// split
+
 let str = "Привіт";
 
 console.log( str.toUpperCase() ); // ПРИВІТ
@@ -84,6 +94,25 @@ console.log( sum.toFixed(2) ); // 0.30
 
 
 //arrays
+
+// array methods
+// join
+// pop
+// push
+// shift
+// unshift
+// concat
+// splice?
+// high order array methods
+// foreach
+// map
+// reduce
+// filter
+// some
+// every
+// find
+
+
 let fruits = ["Apple", "Orange", "Plum"];
 
 console.log( fruits[0] ); // Apple

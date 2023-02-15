@@ -25,12 +25,12 @@ console.log(s); // mystring
 console.log( '1' + 2 ); // "12"
 console.log( 2 + '1' ); // "21"
 
-console.log(2 + 2 + '1' ); // "41", а не "221"
+console.log(2 + 2 + '1' ); // "41", not "221"
 
-console.log('1' + 2 + 2); // "122", а не "14"
+console.log('1' + 2 + 2); // "122", not "14"
 
-console.log( 6 - '2' ); //  4, '2' перетворюється на число convert in number
-console.log( '6' / '2' ); // 3, обидва операнди перетворюються на числа  convert in number
+console.log( 6 - '2' ); //  4, '2'  convert in number
+console.log( '6' / '2' ); // 3,   convert in number
 
 
 //Numeric conversion, unary + Числове перетворення, унарний +
@@ -44,8 +44,8 @@ let oranges = "3";
 console.log( +apples + +oranges ); // 5
 
 
-//Інкремент/декремент
-//Інкремент ++ збільшує змінну на 1:
+//
+//Increment ++ 
 let counterr = 1;
 counter++;        // працює так само, як counter = counter + 1, але запис коротше
 console.log( counterr ); // 2
@@ -72,13 +72,13 @@ decr = 10;
 console.log(++incr);
 console.log(--decr);
 
-//Декремент -- зменшує змінну на 1:
+//Decrement --
 let counter = 2;
-counter--;        // працює так само, як counter = counter - 1, але запис коротше
+counter--;        
 console.log( counter ); // 1
 
 let counter = 1;
-let a = counter++; // (*) змінили ++counter на counter++
+let a = counter++; // 
 console.log(a); // 1
 
 let counter = 0;
@@ -90,9 +90,9 @@ console.log( --counter ); // -1
 
 //Оператори порівняння
 
-console.log( 2 > 1 );  // true (правильно)
-console.log( 2 == 1 ); // false (неправильно)
-console.log( 2 != 1 ); // true (правильно)
+console.log( 2 > 1 );  // true 
+console.log( 2 == 1 ); // false 
+console.log( 2 != 1 ); // true 
 
 console.log( 'Я' > 'А' ); // true
 console.log( 'Я' < 'А' ); // false
