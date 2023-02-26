@@ -1,4 +1,4 @@
-//Базові оператори Basic operators Арифметичні
+// Basic operators Арифметичні
 /*Maths
 The following math operations are supported:
 
@@ -9,19 +9,26 @@ Division /,
 Remainder %,
 Exponentiation **.*/
 
-//Remainder %, Остача від ділення %
-console.log( 5 % 2 ); // 1 — остача від ділення 5 на 2
-console.log( 8 % 3 ); // 2 — остача від ділення 8 на 3
+////////////////////////////////////////////////////////////
 
-//Exponentiation ** Піднесення до степеня **
+//Remainder %, 
+console.log( 5 % 2 ); // 1 
+console.log( 8 % 3 ); // 2 
+
+///////////////////////////////////////////////////////////
+
+//Exponentiation ** 
 console.log( 2 ** 2 ); // 2² = 4
 console.log( 2 ** 3 ); // 2³ = 8
 console.log( 2 ** 4 ); // 2⁴ = 16
+
+//////////////////////////////////////////////////////////////
 
 //String concatenation with binary +, 
 let s = "my" + "string";
 console.log(s); // mystring
 
+////////////////////////////////////////////////////////////////
 console.log( '1' + 2 ); // "12"
 console.log( 2 + '1' ); // "21"
 
@@ -32,22 +39,25 @@ console.log('1' + 2 + 2); // "122", not "14"
 console.log( 6 - '2' ); //  4, '2'  convert in number
 console.log( '6' / '2' ); // 3,   convert in number
 
+/////////////////////////////////////////////////////////////////////
 
-//Numeric conversion, unary + Числове перетворення, унарний +
+//Numeric conversion, unary +
 let appless = "2";
 let orangess = "3";
 console.log( appless + orangess ); // "23", the binary plus concatenates strings
+
+/////////////////////////////////////////////////////////////////////////
 
 let apples = "2";
 let oranges = "3";
 // both values converted to numbers before the binary plus
 console.log( +apples + +oranges ); // 5
 
+/////////////////////////////////////////////////////////////////////////////
 
-//
 //Increment ++ 
 let counterr = 1;
-counter++;        // працює так само, як counter = counter + 1, але запис коротше
+counter++;        // 
 console.log( counterr ); // 2
 
 let counterrr = 1;
@@ -60,17 +70,15 @@ console.log( ++counteer ); // 1
 let couunter = 0;
 console.log( couunter++ ); // 0
 
+//////////////////////////////////////////////////////////////////////
+
 let incr = 10,
 decr = 10;
-//incr++; //інкремент постфіксний
-//decr--; //декремент
-//++incr; //префіксна форма зипису
-//--decr;
-//console.log(incr);
-//console.log(decr);
 
 console.log(++incr);
 console.log(--decr);
+
+///////////////////////////////////////////////////////////////////////
 
 //Decrement --
 let counter = 2;
@@ -87,8 +95,7 @@ console.log( counter-- ); // 0
 let counter = 0;
 console.log( --counter ); // -1
 
-
-//Оператори порівняння
+///////////////////////////////////////////////////////////////////////////////
 
 console.log( 2 > 1 );  // true 
 console.log( 2 == 1 ); // false 
@@ -103,17 +110,20 @@ console.log( 'Соки' < 'Сода' ); // false
 console.log( 'Комар' > 'Кома' ); // true
 console.log( 'Комар' < 'Кома' ); // false
 
+/////////////////////////////////////////////////////////////////////////////////
 
 //Порівняння різних типів
 //Коли порівнюються значення різних типів, JavaScript конвертує ці значення в числа.
 
-console.log( '2' > 1 ); // true, рядок '2' стає числом 2
-console.log( '01' == 1 ); // true, рядок '01' стає числом 1
-console.log( '01' === 1 ); //  false, тому що порівнюються різні типи
+console.log( '2' > 1 ); // true, '2' convert in number 2
+console.log( '01' == 1 ); // true, '01' convert in number1
+console.log( '01' === 1 ); //  false, ather tipes
 console.log( 0 == false ); // true
 
 //Оператор строгої рівності === перевіряє рівність без перетворення типів.
-console.log( 0 === false ); // false, тому що порівнюються різні типи
+console.log( 0 === false ); // false, another types
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Логічні оператори
 //|| (АБО) знаходить перше правдиве значення
@@ -123,6 +133,8 @@ console.log( false || true );  // true
 console.log( true || false );  // true
 console.log( false || false ); // false
 console.log( undefined || null || 0 ); // 0 (усі хибні, повертається останнє значення)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //&& (І)  шукає перше хибне значення
 console.log( true && true );   // true
@@ -134,13 +146,19 @@ console.log( false && false ); // false
 console.log( 1 && 2 && 3 ); // 3, останнє
 //Оператор І && має вищий пріоритет за АБО ||.
 
+////////////////////////////////////////////////////////////////////////////////
+
 //! (НЕ)
 console.log( !true ); // false
 console.log( !0 ); // true
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 //Подвійний НЕ !! іноді використовується для перетворення значення на булевий тип:
 console.log( !!"не пустий рядок" ); // true
 console.log( !!null ); // false
+
+////////////////////////////////////////////////////////////////////////////////////
 
 //Оператор об’єднання з null '??'
 let user = "Ivan";
@@ -157,6 +175,8 @@ let nickName = "Super";
 console.log(firstName ?? lastName ?? nickName ?? "Some"); // Super
 
 
+////////////////////////////////////////////////////////////////////////////////////////
+
 //Порівняння з ||
 let firstName = null;
 let lastName = null;
@@ -165,6 +185,7 @@ let nickName = "Super";
 // показує перше істинне значення:
 console.log(firstName || lastName || nickName || "Some"); // Super
 
+/////////////////////////////////////////////////////////////////////////////////////
 
 let height = 0;
 console.log(height || 100); // 100
@@ -172,9 +193,13 @@ console.log(height ?? 100); // 0
 
 //Пріоритет оператора ?? такий самий, як у ||
 
+//////////////////////////////////////////////////////////////////////////////////
+
 let x = 1 && 2 ?? 3; // Синтаксична помилка
 
 let x = (1 && 2) ?? 3; // Працює
+
+///////////////////////////////////////////////////////////////////////////////////
 
 const isChecked = true,
 isClose = false;

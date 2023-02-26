@@ -4,6 +4,7 @@ function showMessage() {
   }
   showMessage()
 
+//////////////////////////////////////////////////////////////
 
   let userName = 'Ivan';
 function showMessage() {
@@ -12,24 +13,30 @@ function showMessage() {
 }
 showMessage(); //Hello, Ivan
 
+//////////////////////////////////////////////////////////////
 
-function showMessage(from, text) { // параметри: from, text
+
+function showMessage(from, text) { 
     console.log(from + ': ' + text);
   }
   showMessage('Ivan', 'Hello!'); //Ivan: Hello!
   
+///////////////////////////////////////////////////////////////
 
-  function showMessage(from = "Ivan", text = "Hello") { // параметри: from, text
+  function showMessage(from = "Ivan", text = "Hello") { 
     console.log(from + ': ' + text);
   }
   showMessage(); //Ivan: Hello!
 
+//////////////////////////////////////////////////////////////
 
-  sayHi("Ivan"); // Привіт, Іван
+
+  sayHi("Ivan"); // 
   function sayHi(name) {
     console.log( `Hello, ${name}` );//Hello, Ivan
   }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //Function expression
   let sayHi = function() {
@@ -37,13 +44,16 @@ function showMessage(from, text) { // параметри: from, text
   };
   sayHi()//Hello
 
+  ////////////////////////////////////////////////////////////////////
 
-  function sayHi() {   // (1) створюємо
+  function sayHi() {   // 
     console.log( "Hello" );
   }
   let func = sayHi;    
   func(); // Hello  
   sayHi(); // Hello  
+
+///////////////////////////////////////////////////////////////////////////
 
 
   sayHi("Ivan"); // ReferenceError: Cannot access 'sayHi' before initialization
@@ -51,23 +61,29 @@ function showMessage(from, text) { // параметри: from, text
     console.log( `Hello, ${name}` );
   }
 
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 //Array function
 
 let sum = (a, b) => a + b;
 console.log( sum(1, 2) ); // 3
 
+/////////////////////////////////////////////////////////////////////////////////
 
 let double = n => n * 2;
-// те ж саме, що і: let double = function(n) { return n * 2 }
+// let double = function(n) { return n * 2 }
 console.log( double(3) ); // 6
 
+/////////////////////////////////////////////////////////////////////////////////
 
 let sayHi = () => console.log("Привіт!");
 
 sayHi();
 
-//функції колбек callback
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// callback
 
 function learnjS(lang, callback) {
     console.log(`I am studing ${lang}`);
@@ -79,6 +95,30 @@ function done() {
 
 learnjS("JavaScript", done);
 
+//////////////////////////////////////////////////////////////////////////////
+
+//A callback is a function passed as an argument to another function.
+ function one(a,b){
+     console.log(a + b);
+ }
+ // scope of a function
+ function two(number1 = 1, number2 = 2,someFunction) {
+     someFunction(number1, number2);
+ }
+// // how to skip params?
+ two(undefined,undefined, one) // 3
+
+ /////////////////////////////////////////////////////////////////////////////
+
+
+ // foreach has 3 params: value, index, array
+ const arr = ['a', 'b', 'c'];
+ function logArrayElements(element,index,array){
+     console.log(index)
+ };
+ arr.forEach( logArrayElements ); // 0 1 2
+
+/////////////////////////////////////////////////////////////////////////////////
 
   // Способи створення IIFE
 

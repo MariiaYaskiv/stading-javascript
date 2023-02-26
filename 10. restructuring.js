@@ -20,7 +20,7 @@ console.log(lastName); // "Sofela"
 console.log(website); // "codesweetly.com"
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const profile = ["Oluwatobi", "Sofela", "codesweetly.com"];
 
@@ -31,7 +31,7 @@ console.log(lastName); // "Sofela"
 console.log(website); // "codesweetly.com"
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -45,6 +45,7 @@ const [firstName, lastName, website] = [
   console.log(lastName); // "Sofela"
   console.log(website); // "codesweetly.com"
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   let firstName, lastName, website;
 
@@ -55,7 +56,7 @@ console.log(lastName); // "Sofela"
 console.log(website); // "codesweetly.com"
 
 
-
+///////////////////////////////////////////////////////////////////////////////////
 
 const profile = {
     firstName: "Oluwatobi", 
@@ -83,17 +84,53 @@ const profile = {
   console.log(lastName); // "Sofela"
   console.log(website); // "codesweetly.com"
 
+//////////////////////////////////////////////////////////////////////////////////////////
 
-  function display({name:userName, age:userAge}){
-    console.log(userName, userAge);
-}
 function sum([a, b, c]){
     const result = a + b + c;
     console.log(result);
 }
-let user = {name:"Alice", age:33, email: "alice@gmail.com"};
- 
-let numbers = [3, 5, 7, 8];
- 
-display(user);  // Alice 33
-sum(numbers);   // 15
+sum([1,2,3])
+//////////////////////////////////////////////////////////////////////////////////////////
+
+const destArr = ['Kyiv','London','Paris'];
+ const kyiv = destArr[0];
+ const london = destArr[1];
+ const paris = destArr[2];
+ const [kyiv, london, paris] = destArr;
+ console.log(kyiv,london,paris)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+ const teacher = {
+       firstName: 'Mariya',
+       lastName: 'Yaskiv',
+       salary: undefined
+   }
+  
+    delete teacher.salary;
+   teacher.subject = 'JavaScript';
+  
+  
+   const firstName = teacher.firstName;
+   const lastName = teacher.lastName;
+   const subject = teacher.subject;
+   console.log(firstName, lastName, subject)
+  
+  // show destructuring, alias
+   const firstName = 'Taras';
+   const { firstName: objectFirstName,lastName,subject } = teacher;
+   console.log(objectFirstName,lastName,subject)
+  
+
+
+  // functions can also use destructuring
+ function destFunction(object){
+     const firstName = object.firstName;
+     const lastName = object.lastName;
+     const subject = object.subject;
+     console.log(firstName,lastName,subject)
+ }
+ function destFunction({firstName,lastName,subject}){
+     console.log(firstName,lastName,subject)
+ }
+ destFunction(teacher);
