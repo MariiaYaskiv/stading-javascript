@@ -1,7 +1,7 @@
 //Методи примітивів
 
 // string methods
-let str = 'asd'
+
 // length
 // slice
 // includes
@@ -9,12 +9,10 @@ let str = 'asd'
 // concat
 // split
 
-let str = "Привіт";
+let str = "Hello";
 
 console.log( str.toUpperCase() ); // ПРИВІТ
 
-//Довжина рядка
-//alert( `Моє\n`.length ); // 4
 
 //Ми також можемо перебрати рядок посимвольно, використовуючи for..of:
 
@@ -29,15 +27,27 @@ console.log( 'Interface'.toLowerCase() ); // interface
 
 console.log( 'Interface'[0].toLowerCase() ); // 'і'
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let str = 'My name';
 
 console.log( str.indexOf('My') ); // 0, тому що було знайдено на початку
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //includes, startsWith, endsWith
 console.log( "Interface".startsWith("Inter") ); // true
 console.log( "Interface".includes("ace") ); // true
 console.log( "Interface".endsWith("face") ); // true
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+let string1 = "Hello World";
+console.log(string1.slice(0, 5))
+str2 = string1.slice(0, 5)
+console.log(str2)
+
+///////////////////////////////////////
 
 let str = "stringify";
 console.log( str.slice(0, 5) ); // 'strin', підрядок від 0 до 5 (5 не включно)
@@ -46,7 +56,7 @@ console.log( str.slice(0, 1) ); // 's', від 0 до 1, але 1 не вклю�
 let str = "stringify";
 console.log( str.slice(2) ); // 'ringify', з позиції 2 і до кінця
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Порівняння рядків
 
 //Літера в малому регістрі завжди більша за літеру у великому:
@@ -57,8 +67,7 @@ console.log( 'a' > 'Z' ); // true
 console.log( 'Österreich' > 'Zealand' ); // true
 
 
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Numbers
 let num = Number("123"); // конвертує рядок в число
@@ -91,7 +100,7 @@ alert( parseFloat('12.3.4') ); // 12.3, друга крапка зупиняє �
 let sum = 0.1 + 0.2;
 console.log( sum.toFixed(2) ); // 0.30
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //arrays
 
@@ -126,6 +135,8 @@ let fruits = ["Apple", "Orange", "Plum"];
 
 console.log( fruits.length ); // 3
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 
 //У масивах можуть зберігатись елементи будь-якого типу.
 
@@ -135,6 +146,8 @@ let arr = [ 'Apple', { name: 'John' }, true, function() { console.log('hello'); 
 console.log( arr[1].name ); // John
 // отримати елемент з індексом 3 (функція) та виконати її
 arr[3](); // hello
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //push додає елементи в кінець.
@@ -165,6 +178,7 @@ fruits.unshift("Pineapple", "Lemon");
 // ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
 console.log( fruits );
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 let fruits = ["Apple", "Orange", "Plum"];
@@ -173,12 +187,14 @@ for (let fruit of fruits) {
   console.log( fruit );
 }
 
+//////////////////////////////////////////////////////////////////////
 
 let arr = ["Apple", "Orange", "Pear"];
 for (let key in arr) {
   console.log( arr[key] ); // Apple, Orange, Pear
 }
 
+///////////////////////////////////////////////////////////////////////
 
 let matrix = [
   [1, 2, 3],
@@ -188,11 +204,15 @@ let matrix = [
 
 console.log( matrix[1][1] ); // 5, центральний елемент
 
+////////////////////////////////////////////////////////////////////////
+
 
 let arr = ["I", "study", "JavaScript"];
 arr.splice(1, 1); // з індексу 1 видалимо 1 елемент
 console.log( arr ); // ["I", "JavaScript"]
 
+
+////////////////////////////////////////////////////////////////////////
 
 let arr = [1, 2];
 
@@ -203,11 +223,12 @@ console.log( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
 // створимо масив з: arr і [3,4], також добавимо значення 5 і 6
 console.log( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
 
+///////////////////////////////////////////////////////////////////////////
 
 let arr = [1, 0, false];
 console.log( arr.includes(1) ); // true
 
-
+////////////////////////////////////////////////////////////////////////////
 
 let users = [
   {id: 1, name: "John"},
@@ -219,7 +240,7 @@ let user = users.find(item => item.id == 1);
 console.log(user.name); // John
 
 
-
+////////////////////////////////////////////////////////////////////////////////
 
 let users = [
   {id: 1, name: "John"},
@@ -230,44 +251,48 @@ let users = [
 let someUsers = users.filter(item => item.id < 3);
 console.log(someUsers.length); // 2
 
-
+////////////////////////////////////////////////////////////////////////////////////
 
 let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
 console.log(lengths); // 5,7,6
 
 
+///////////////////////////////////////////////////////////////////////////////////
 
 let arr = [ 1, 2, 15 ];
 // метод сортує вміст arr
 arr.sort();
 console.log( arr );  // 1, 15, 2
 
+/////////////////////////////////////////////////////////////////////////////////////
 
 let arr = [1, 2, 3, 4, 5];
 arr.reverse();
 console.log( arr ); // 5,4,3,2,1
 
+///////////////////////////////////////////////////////////////////////////////////////
 
 let str = "test";
-console.log( str.split('') ); // t,e,s,t
+console.log( str.split('') ); // [ 't', 'e', 's', 't' ]
 
+//////////////////////////////////////////////////////////////////////////////////////
 
 let arr = 'Вася, Петя, Маша, Іван'.split(', ', 2);
-console.log(arr); // Вася, Петя
+console.log(arr); // [ 'Вася', 'Петя' ]
 
-
+////////////////////////////////////////////////////////////////////////////////////////
 
 let arr = ["Вася", "Петя", "Маша"];
-let str = arr.join(';'); // обʼєднуємо масив в рядок за допомогою ";"
-console.log( str ); // Вася;Петя;Маша
+let str = arr.join(' '); // обʼєднуємо масив в рядок за допомогою ";"
+console.log( str ); // Вася Петя Маша
 
-
+//////////////////////////////////////////////////////////////////////////////////////////
 
 let arr = [1, 2, 3, 4, 5];
 let result = arr.reduce((sum, current) => sum + current, 0);
 console.log(result); // 15
 
-
+//////////////////////////////////////////////////////////////////////////////////////////
 
 /*Для додавання/видалення елементів:
 push(... items) – додає елементи до кінця,
@@ -297,6 +322,9 @@ reduce(func, initial) – обчислює одне значення на осн
 
 Array.isArray(arr) перевіряє, чи є arr масивом.*/
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //object
 
 //Object.keys, values, entries
@@ -305,3 +333,44 @@ Array.isArray(arr) перевіряє, чи є arr масивом.*/
 //Object.keys(obj) – повертає масив ключів.
 //Object.values(obj) – повертає масив значень.
 //Object.entries(obj) – повертає масив пар [ключ, значення].
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Managing Objects
+// Create object with an existing object as prototype
+// Object.create()
+
+// // Adding or changing an object property
+// Object.defineProperty(object, property, descriptor)
+// // Adding or changing object properties
+// Object.defineProperties(object, descriptors)
+
+// // Accessing Properties
+// Object.getOwnPropertyDescriptor(object, property)
+
+// // Returns all properties as an array
+// Object.getOwnPropertyNames(object)
+
+// // Accessing the prototype
+// Object.getPrototypeOf(object)
+
+// // Returns enumerable properties as an array
+// Object.keys(object)
+
+// // Protecting Objects
+// // Prevents adding properties to an object
+// Object.preventExtensions(object)
+
+// // Returns true if properties can be added to an object
+// Object.isExtensible(object)
+
+// // Prevents changes of object properties (not values)
+// Object.seal(object)
+
+// // Returns true if object is sealed
+// Object.isSealed(object)
+
+// // Prevents any changes to an object
+// Object.freeze(object)
+
+// // Returns true if object is frozen
+// Object.isFrozen(object)
